@@ -2,20 +2,12 @@
 <html>
 <head>
 <style>
-
-    .work-img {
-        position: relative;
-        top: 10px;
-        left: 10px;
-        background-size: 300px 300px;
-    }
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #534646;
+  background-color: #333;
 }
 
 li {
@@ -38,19 +30,18 @@ li a:hover:not(.active) {
   background-color: #4CAF50;
 }
 
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+iframe {
+  position: relative;
+  left: 30%
 }
 
-.button1 {background-color: #4CAF50; position: relative; left: 25%; height: 50px; width: 300px} /* Green */
-    .button2 {background-color: #008CBA;position: relative; left: 45%; height: 50px; width: 300px}} /* Blue */
+button {
+    background-color: #4CAF50;
+    position: relative;
+    left: 50%;
+    height: 50px;
+    width: 300px
+}
 
 </style>
     <!-- Required meta tags -->
@@ -77,20 +68,13 @@ li a:hover:not(.active) {
     </header>
 
     <h1>WEconnect</h1>
+    <h2>Please fill in the survey to find your perfect job experience placement! Click the next button at the bottom after your finished.</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-ra3RWIymet0GtdOXF5eFx9JcVAB-ti0QzcSHmZP1qHa6Wg/viewform?embedded=true" width="640" height="2904" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <button>Next</button>
 
     <main role="main" class="container">
           {% block content %}{% endblock %}
     </main>
-
-    <img class="work-img" src="{{url_for('static', filename='work.jpg')}}"/>
-    <h1> Are you a . . . ?</h1>
-
-    <a href='/students'>
-        <button class="button1" type="button"> Student</button>
-    </a>
-
-    <a href='/employers'>
-    <button class="button2" type="button"> Employer</button>
-    </a>
 </body>
 </html>
