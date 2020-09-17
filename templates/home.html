@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>By {{ post.author }} on  {{ post.date_posted }}</p>
+        <p> {{ post.content }}</p>
+    {% endfor %}
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd-ra3RWIymet0GtdOXF5eFx9JcVAB-ti0QzcSHmZP1qHa6Wg/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+{%  endblock content %}
