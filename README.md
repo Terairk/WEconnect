@@ -11,3 +11,5 @@ The UI is a bit bad but I think you'll get the main point. The final part is whe
 
 Here's the link to the figma (the frontend mock up that looks much better than this)
 https://www.figma.com/proto/5MqnNJjrJ7MtPUCK0xZglq/Team-6-Prototype---Students?node-id=194%3A183&scaling=min-zoom
+
+Also if you want to run this code for yourselves, you need to import nltk and do nltk.download() in your python installation. And of course download all the files in the requirements.txt file.
