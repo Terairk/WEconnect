@@ -1,5 +1,3 @@
-# copied from main.py which was used for testing
-
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 from nltk.corpus import wordnet as wn
@@ -143,67 +141,13 @@ for employer in employers:
     employersWeightingScores[i] = weight
     i += 1
 
-finalList = []
 # sort employers weighting score
 sortedRankings = sorted(employersWeightingScores, key=employersWeightingScores.get)
 sortedRankings.reverse()
 for i in range(11):
     employerName = employers[sortedRankings[i]][1]
-    s = str(i+1) + ": " + employerName
-    print(s)
-    finalList.append(s)
-
-from flask import Flask, render_template, url_for
-app = Flask(__name__)
-
-posts = [
-    {
-        "author": "Ahmad Jamsari",
-        "title": "Blog Post 1",
-        "content": "First content",
-        "date_posted": "April 20, 2018"
-    },
-    {
-        "author": "Jane Doe",
-        "title": "Blog Post 2",
-        "content": "Second post content",
-        "date_posted": "April 21, 2018"
-    }
-]
-
-@app.route('/')
-@app.route("/home")
-def home():
-    return render_template("home.html", posts=posts)
+    print(str(i+1) + ": " + employerName)
 
 
-@app.route('/about')
-def about():
-    return render_template("about.html", title="About")
 
 
-@app.route('/login')
-def login():
-    return render_template("login.html")
-
-
-@app.route('/register')
-def register():
-    return render_template("register.html")
-
-
-@app.route('/employers')
-def employer():
-    return render_template("employer.html")
-
-
-@app.route('/students')
-def student():
-    return render_template("students.html")
-
-@app.route('/final')
-def final():
-    return render_template("final.html", companies = finalList)
-
-if __name__ == '__main__':
-    app.run()
