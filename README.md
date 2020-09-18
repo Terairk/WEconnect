@@ -8,3 +8,6 @@ The actual website link to the project being deployed onto a server is http://43
 That's where you can test the website for yourself and see what it does.
 
 The UI is a bit bad but I think you'll get the main point. The final part is where it ranks the companies from best to worst (fake companies mind you)
+
+Here's the link to the figma (the frontend mock up that looks much better than this)
+https://www.figma.com/proto/5MqnNJjrJ7MtPUCK0xZglq/Team-6-Prototype---Students?node-id=194%3A183&scaling=min-zoom
